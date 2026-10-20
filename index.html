@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>シドニー旅行 11/18–11/22</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#f3f6f9;--surface:#ffffff;--ink:#14263a;--muted:#5a6b7d;--line:#d6dee6;
+  --accent:#6a45b5;--accent-soft:#ece6f7;--harbour:#1e5a82;--warn:#b4541a;--warn-soft:#fbeee3;
+  --font:"Zen Kaku Gothic New","Hiragino Sans","Noto Sans JP","Yu Gothic",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){color-scheme:dark;
+    --bg:#0f1b29;--surface:#172636;--ink:#e6edf4;--muted:#9fb0c1;--line:#2a3d52;
+    --accent:#b9a1ee;--accent-soft:#2a2342;--harbour:#7db8e0;--warn:#f0a36e;--warn-soft:#3a2a1e;}
+}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#0f1b29;--surface:#172636;--ink:#e6edf4;--muted:#9fb0c1;--line:#2a3d52;
+  --accent:#b9a1ee;--accent-soft:#2a2342;--harbour:#7db8e0;--warn:#f0a36e;--warn-soft:#3a2a1e;}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.8;font-size:16px}
+main{max-width:720px;margin:0 auto;padding:28px 18px 64px}
+a{color:var(--harbour);text-underline-offset:3px}
+h1{font-size:1.9rem;line-height:1.3;margin:0 0 6px;font-weight:700}
+.lead{color:var(--muted);margin:0 0 20px}
+.hotel{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px;margin-bottom:18px}
+.hotel b{display:block}
+nav{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:8px}
+nav a{flex:none;text-decoration:none;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:4px 14px;font-size:.9rem}
+nav a:focus-visible,a:focus-visible,input:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+section{margin-top:34px;padding-left:18px;border-left:4px solid var(--accent)}
+section h2{margin:0;font-size:1.35rem;line-height:1.4}
+section h2 small{display:block;font-size:.85rem;font-weight:500;color:var(--muted)}
+h3{font-size:1.05rem;margin:20px 0 4px;color:var(--harbour)}
+ul{margin:4px 0;padding-left:1.2em}
+li{margin:2px 0}
+li ul{margin:0}
+.time{display:inline-block;font-weight:700;color:var(--accent)}
+.note{background:var(--warn-soft);border-radius:8px;padding:8px 14px;margin:12px 0;font-size:.95rem}
+.note b{color:var(--warn)}
+.spots{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none;margin:8px 0}
+.spots li{background:var(--accent-soft);border-radius:8px;padding:4px 12px;margin:0}
+.todo{margin-top:44px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.todo h2{margin:0 0 6px;font-size:1.2rem}
+.todo label{display:flex;gap:10px;align-items:flex-start;padding:4px 0;cursor:pointer}
+.todo input{margin-top:.5em;width:18px;height:18px;accent-color:var(--accent);flex:none}
+.todo input:checked+span{color:var(--muted);text-decoration:line-through}
+body{background:linear-gradient(180deg,var(--bg),var(--bg)) fixed}
+.bar{position:fixed;top:0;left:0;height:3px;width:100%;transform-origin:0 50%;transform:scaleX(0);background:linear-gradient(90deg,var(--harbour),var(--accent));z-index:20}
+.hero{position:relative;overflow:hidden;border-radius:20px;padding:36px 22px 70px;margin-bottom:20px;color:#fff;
+  background:linear-gradient(135deg,#1e5a82 0%,#4a5cb0 55%,#6a45b5 100%);background-size:200% 200%;animation:flow 14s ease-in-out infinite;box-shadow:0 12px 30px -12px rgba(30,90,130,.55)}
+.hero h1{color:#fff;margin:0 0 8px;font-size:clamp(1.7rem,6vw,2.2rem)}
+.hero h1 span{display:block;font-size:.55em;font-weight:500;opacity:.9;letter-spacing:.04em}
+.hero .lead{color:rgba(255,255,255,.88);margin:0}
+.hero .plane{position:absolute;top:22px;right:-40px;font-size:1.8rem;animation:fly 9s linear infinite}
+.hero .waves{position:absolute;left:0;bottom:-1px;width:200%;height:46px;animation:drift 10s linear infinite}
+.hero .waves path{fill:var(--bg)}
+.hero .waves path:first-child{opacity:.35}
+@keyframes flow{50%{background-position:100% 100%}}
+@keyframes fly{from{transform:translateX(0) translateY(0) rotate(-8deg)}to{transform:translateX(-120vw) translateY(-18px) rotate(-8deg)}}
+@keyframes drift{to{transform:translateX(-50%)}}
+.hero>*{animation:rise .8s both}.hero .lead{animation-delay:.15s}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+.hotel{box-shadow:0 6px 18px -10px rgba(20,38,58,.35)}
+nav{position:sticky;top:0;z-index:10;margin:0 -18px 8px;padding:10px 18px;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+nav a{transition:background .25s,color .25s,transform .25s}
+nav a:hover{transform:translateY(-2px)}
+nav a.on{background:var(--accent);border-color:var(--accent);color:#fff}
+section{position:relative}
+section::before{content:"";position:absolute;left:-11px;top:6px;width:18px;height:18px;border-radius:50%;background:var(--surface);border:4px solid var(--accent)}
+section.in::before{animation:pop .6s .1s both}
+@keyframes pop{0%{transform:scale(0)}70%{transform:scale(1.35)}100%{transform:scale(1)}}
+section h2{font-size:1.45rem}
+.spots li{transition:transform .2s,box-shadow .2s}
+.spots li:hover{transform:translateY(-3px);box-shadow:0 6px 12px -6px rgba(106,69,181,.5)}
+.note{border-left:4px solid var(--warn)}
+.js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.in{opacity:1;transform:none}
+.js section.in li{animation:rise .6s both}
+.js section.in li:nth-child(2){animation-delay:.08s}.js section.in li:nth-child(3){animation-delay:.16s}
+.js section.in li:nth-child(4){animation-delay:.24s}.js section.in li:nth-child(5){animation-delay:.32s}
+.prog{height:8px;border-radius:99px;background:var(--line);overflow:hidden;margin:8px 0 10px}
+.prog i{display:block;height:100%;width:0;border-radius:inherit;background:linear-gradient(90deg,var(--harbour),var(--accent));transition:width .5s cubic-bezier(.3,1.4,.5,1)}
+.prog-label{font-size:.85rem;color:var(--muted);margin:0}
+.todo label{transition:transform .2s}
+.todo label:hover{transform:translateX(3px)}
+.todo input:checked{animation:pop .4s}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+  .js .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<main>
+<header class="hero">
+<span class="plane" aria-hidden="true">✈️</span>
+<h1>シドニー旅行<span>11/18（水）〜 11/22（日）</span></h1>
+<p class="lead">羽田発着・4泊5日。2日目のスケジュールや店は、家族で決める。</p>
+<svg class="waves" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22 Q150 0 300 22 T600 22 T900 22 T1200 22 V46 H0Z"/><path d="M0 30 Q150 10 300 30 T600 30 T900 30 T1200 30 V46 H0Z"/></svg>
+</header>
+
+<div class="hotel"><b>ホテル</b>
+<a href="https://oneglobalresorts.com.au/">One Global Resorts Green Square</a><br>
+Green Square駅の真上。Central駅まで1駅、空港まで2駅。キッチン付き。</div>
+
+<nav aria-label="日程">
+<a href="#d1">1日目</a><a href="#d2">2日目</a><a href="#d3">3日目</a><a href="#d4">4日目</a><a href="#d5">5日目</a><a href="#todo">準備</a>
+</nav>
+
+<section id="d1">
+<h2>1日目　11/18（水）<small>移動日・予定なし</small></h2>
+<h3>北千住 → 羽田</h3>
+<ul>
+<li>日比谷線の始発では間に合わないので、<b>タクシーで4:00ごろ出発</b>（約1時間、13,000円くらい）</li>
+<li>5:00ごろには羽田に着いていたい</li>
+</ul>
+<h3><span class="time">6:55 - 18:50</span> ✈️ フライト</h3>
+<ul>
+<li>空港から電車で2駅の<b>Green Square駅</b>へ</li>
+<li>入国審査と荷物受け取り込みで、ホテル着は20:30ごろの想定</li>
+<li>移動で疲れるので予定は入れず、そのままホテルへ</li>
+<li>近くのスーパーで好きなものを買って、ホテルで食べる（元気なら外をぷらぷら）</li>
+</ul>
+<div class="note"><b>メモ</b>　空港から市内は近い（電車で20分くらい）。空港駅の発着には、運賃とは別に駅アクセス料金がかかる。</div>
+</section>
+
+<section id="d2">
+<h2>2日目　11/19（木）<small>シティ観光</small></h2>
+<ul class="spots">
+<li>オペラハウス</li>
+<li>ロイヤル・ボタニック・ガーデン</li>
+<li>セントメアリー大聖堂</li>
+<li>ザ・ロックス</li>
+<li>クイーン・ビクトリア・ビルディング（買い物）</li>
+</ul>
+<p>回る順番や時間は、家族で決める。</p>
+<h3>ご飯</h3>
+<ul>
+<li>昼・夜は予約した方がよさそう</li>
+<li>夜はオージービーフ</li>
+</ul>
+<div class="note"><b>メモ</b>　木曜はシティ中心部のレイトショッピングの日で、夜まで開いている店が多い。<b>お土産はこの日に買うのがおすすめ。</b></div>
+</section>
+
+<section id="d3">
+<h2>3日目　11/20（金）<small>ブルーマウンテン</small></h2>
+<h3><span class="time">7:00 - 17:00</span> <a href="https://www.veltra.com/jp/oceania/australia/sydney/a/180399">ブルーマウンテン・フェザーテール動物園</a></h3>
+<ul>
+<li>集合場所：<a href="https://maps.app.goo.gl/QgtC3a9JagkNKVcd6">リッジス・ワールド・スクエアホテル Pitt Street側ホテル玄関前</a></li>
+<li><b>7:25にピックアップ</b></li>
+<li>Green Square駅 → Town Hall駅まで電車。そこから徒歩数分<br>（6:40ごろにホテルを出る想定。不安なら朝だけUber／タクシーでもOK）</li>
+<li>持ち物：羽織れる上着、歩きやすい靴、日焼け止め、飲み物</li>
+</ul>
+<h3><span class="time">17:00 - 19:00</span></h3>
+<ul>
+<li>お土産購入（閉まっている店が多いかも。2日目に買っても◯）</li>
+<li>ホテルに荷物を置いてもよい</li>
+</ul>
+<h3><span class="time">19:00 - 21:00</span> ディナー</h3>
+<ul><li>集合場所に近いチャイナタウン／ハイマーケットが楽</li></ul>
+</section>
+
+<section id="d4">
+<h2>4日目　11/21（土）<small>フィッシュマーケットとマンリー</small></h2>
+<ul>
+<li><b>フィッシュマーケットで朝食</b>（土曜は混むので朝イチ。施設が移転しているため、行き方は事前に確認）</li>
+<li><b>マンリービーチ</b>
+  <ul>
+  <li>サーキュラーキーからマンリー行きのフェリー🚢に乗る（30分くらい）</li>
+  <li>ビーチにどれくらいいるかは、その場で決める</li>
+  <li>ランチはビーチ付近か、フェリーで戻ってから</li>
+  </ul></li>
+<li>午後はゆったり好きな場所で買い物（カフェにも行きたい）</li>
+</ul>
+</section>
+
+<section id="d5">
+<h2>5日目　11/22（日）<small>帰国</small></h2>
+<ul>
+<li>元気があれば、朝にカフェ</li>
+<li>9:00ごろにホテルを出る（電車で空港へ。10分くらい）</li>
+<li>10:00ごろには空港に着いていたい</li>
+</ul>
+<h3><span class="time">12:00 - 20:00</span> ✈️ フライト</h3>
+<ul><li>羽田着は夜なので、翌日は軽めの予定にしておく</li></ul>
+</section>
+
+<div class="todo" id="todo">
+<h2>出発前にやること</h2>
+<div class="prog" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+<p class="prog-label" aria-live="polite"></p>
+<label><input type="checkbox" data-k="eta"><span>豪州のETA（電子渡航認証）を申請</span></label>
+<label><input type="checkbox" data-k="taxi"><span>11/18 4:00のタクシーを予約</span></label>
+<label><input type="checkbox" data-k="opera"><span>オペラハウスのツアー予約（行く場合）</span></label>
+<label><input type="checkbox" data-k="steak"><span>2日目のランチ・ディナー予約</span></label>
+<label><input type="checkbox" data-k="seafood"><span>4日目のディナー予約（行く場合）</span></label>
+<label><input type="checkbox" data-k="bm"><span>ブルーマウンテンの集合時刻を再確認</span></label>
+<label><input type="checkbox" data-k="sim"><span>eSIM／Wi-Fiルーターの手配</span></label>
+<label><input type="checkbox" data-k="pay"><span>タッチ決済ができるカードを用意（電車・バス・フェリー用）</span></label>
+</div>
+</main>
+<script>
+(function(){
+  document.documentElement.classList.add('js');
+  var boxes=document.querySelectorAll('.todo input'),saved={};
+  var fill=document.querySelector('.prog i'),pb=document.querySelector('.prog'),lb=document.querySelector('.prog-label');
+  function progress(){
+    var n=0;boxes.forEach(function(b){if(b.checked)n++});
+    var p=Math.round(n/boxes.length*100);
+    fill.style.width=p+'%';pb.setAttribute('aria-valuenow',p);
+    lb.textContent=n+' / '+boxes.length+' 完了'+(n===boxes.length?' 🎉 準備OK！':'');
+  }
+  try{saved=JSON.parse(localStorage.getItem('sydney-todo')||'{}')}catch(e){}
+  boxes.forEach(function(b){
+    b.checked=!!saved[b.dataset.k];
+    b.addEventListener('change',function(){
+      saved[b.dataset.k]=b.checked;
+      try{localStorage.setItem('sydney-todo',JSON.stringify(saved))}catch(e){}
+      progress();
+    });
+  });
+  progress();
+
+  var items=document.querySelectorAll('section,.hotel,.todo');
+  items.forEach(function(el){el.classList.add('reveal')});
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+  },{threshold:.12});
+  items.forEach(function(el){io.observe(el)});
+
+  var links=document.querySelectorAll('nav a'),secs=[].slice.call(document.querySelectorAll('section,.todo'));
+  var bar=document.getElementById('bar');
+  function onScroll(){
+    var h=document.documentElement,max=h.scrollHeight-h.clientHeight;
+    bar.style.transform='scaleX('+(max>0?h.scrollTop/max:0)+')';
+    var cur=null;secs.forEach(function(s){if(s.getBoundingClientRect().top<window.innerHeight*.4)cur=s.id});
+    links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+  }
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+})();
+</script>
+</body>
+</html>
