@@ -113,6 +113,14 @@ nav a{min-height:40px;display:inline-flex;align-items:center}
   section h2{font-size:1.3rem}
   .spots li{font-size:.92rem}
 }
+.cards{display:grid;gap:10px;padding:0;list-style:none;margin:10px 0}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:0;display:flex;flex-direction:column;gap:2px}
+.card b{font-size:1.02rem}
+.card .place{font-size:.85rem;color:var(--muted)}
+.card .memo{margin:2px 0;font-size:.95rem}
+.card .links{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.88rem;margin-top:2px}
+@media (min-width:560px){.cards{grid-template-columns:1fr 1fr}}
+html{scroll-padding-top:64px}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
   .js .reveal{opacity:1;transform:none}
@@ -134,7 +142,7 @@ nav a{min-height:40px;display:inline-flex;align-items:center}
 Green Square駅の真上。Central駅まで1駅、空港まで2駅。キッチン付き。</div>
 
 <nav aria-label="日程">
-<a href="#d1">1日目</a><a href="#d2">2日目</a><a href="#d3">3日目</a><a href="#d4">4日目</a><a href="#d5">5日目</a><a href="#todo">準備</a>
+<a href="#d1">1日目</a><a href="#d2">2日目</a><a href="#d3">3日目</a><a href="#d4">4日目</a><a href="#d5">5日目</a><a href="#food">レストラン</a><a href="#todo">準備</a>
 </nav>
 
 <section id="d1">
@@ -216,6 +224,21 @@ Green Square駅の真上。Central駅まで1駅、空港まで2駅。キッチ�
 </ul>
 <h3><span class="time">12:00 - 20:00</span> ✈️ フライト</h3>
 <ul><li>羽田着は夜なので、翌日は軽めの予定にしておく</li></ul>
+</section>
+
+<section id="food">
+<h2>レストラン候補<small>気になった店のメモ。行く日・予約は未定</small></h2>
+<ul class="cards">
+<li class="card"><b>Il Baretto</b><span class="place">パディントン（Paddo Inn内）。旧店はサリーヒルズ</span><p class="memo">公式サイトは見つからず、移転情報がページ間で食い違う。行く前に住所を確認</p><span class="links"><a href="https://www.timeout.com/sydney/restaurants/il-baretto" target="_blank" rel="noopener">Time Out</a> <a href="https://www.broadsheet.com.au/sydney/surry-hills/restaurants/il-baretto" target="_blank" rel="noopener">Broadsheet</a></span></li>
+<li class="card"><b>Totti’s</b><span class="place">ボンダイ（Merivale系）。CBDに姉妹店 Bar Totti’s</span><p class="memo">調べるとよく出る。どちらの店に行くかは要確認</p><span class="links"><a href="https://www.sydney.com/destinations/sydney/sydney-east/bondi/food-and-drink/tottis" target="_blank" rel="noopener">Sydney.com（ボンダイ）</a> <a href="https://www.timeout.com/sydney/restaurants/bar-tottis" target="_blank" rel="noopener">Time Out（Bar Totti’s）</a></span></li>
+<li class="card"><b>Cafe Sydney</b><span class="place">サーキュラーキー（Customs House 5F）</span><p class="memo">高い景色から一望、夜がよさそう</p><span class="links"><a href="https://www.cafesydney.com" target="_blank" rel="noopener">公式</a></span></li>
+<li class="card"><b>Olio</b><span class="place">チッペンデール（Kensington Street）</span><p class="memo">オリーブオイルメイン、ティラミスが絶品</p><span class="links"><a href="https://sydney.com/destinations/sydney/inner-sydney/chippendale/food-and-drink/olio" target="_blank" rel="noopener">Sydney.com</a> <a href="https://www.theaureview.com/travel/review-handmade-seafood-pastas-a-strong-point-for-olio-kensington-street-sydney/" target="_blank" rel="noopener">レビュー</a></span></li>
+<li class="card"><b>ESTER</b><span class="place">チッペンデール（Meagher Street）</span><p class="memo">肉がうまそうすぎた</p><span class="links"><a href="https://sydney.com/destinations/sydney/inner-sydney/chippendale/food-and-drink/ester-restaurant" target="_blank" rel="noopener">Sydney.com</a> <a href="https://www.opentable.com.au/r/ester-chippendale" target="_blank" rel="noopener">OpenTable</a></span></li>
+<li class="card"><b>Gowings</b><span class="place">シティ（49 Market St・QT Sydney）</span><p class="memo">お肉、オイスターあり、雰囲気良き</p><span class="links"><a href="https://www.gourmettraveller.com.au/restaurant-reviews/gowings-bar-and-grill-6819/" target="_blank" rel="noopener">Gourmet Traveller</a></span></li>
+<li class="card"><b>The Apollo</b><span class="place">ポッツポイント（ギリシャ料理）</span><span class="links"><a href="https://www.theapollo.com.au/" target="_blank" rel="noopener">公式</a> <a href="https://www.theinfatuation.com/sydney/reviews/the-apollo" target="_blank" rel="noopener">The Infatuation</a></span></li>
+<li class="card"><b>セルシウスコーヒーダイニング</b><span class="place">カーリビリ（フェリー乗り場）。朝食・ランチ向き</span><span class="links"><a href="https://www.broadsheet.com.au/sydney/kirribilli/cafes/celsius-coffee-and-dining" target="_blank" rel="noopener">Broadsheet</a></span></li>
+</ul>
+<div class="note"><b>メモ</b>　予約の要否・営業時間は、各リンク先で行く前に確認する。</div>
 </section>
 
 <div class="todo" id="todo">
